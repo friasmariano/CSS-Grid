@@ -1,43 +1,79 @@
 body {
+    margin: 0;
     display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
-    height: 100vh;
-    margin: 0px;
+    grid: auto-flow min-content / repeat(12, 1fr);
+    /* grid-gap: 5px; */
 
     grid-template-areas: 
         "header header header"
         "aside content content"
         "aside section section"
         "footer footer footer";
+
+    grid-template-rows: auto 1fr 1fr auto;
 }
 
 header {
     grid-area: header;
-    background-color: aqua;
-    color: grey;
+    background-color: #18667a;
+    color: hsl(192, 0%, 80%);
+    border: 1.5px solid hsl(192, 0%, 80%);
+
+    grid-column-start: 1;
+    grid-column-end: 13;
 }
 
 aside {
     grid-area: aside;
-    background-color: brown;
-    color: whitesmoke;
+    background-color: #18667a;
+    color: hsl(192, 0%, 80%);
+    border: 1.5px solid hsl(192, 0%, 80%);
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 2;
+    grid-row-end: 12;
 }
+
 
 main {
     grid-area: content;
-    background-color: blue;
-    color: whitesmoke;
+    background-color: #18667a;
+    color: hsl(192, 0%, 80%);
+    border: 1.5px solid hsl(192, 0%, 80%);
+
+    grid-column-start: 3;
+    grid-column-end: 13;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
+
 
 section {
     grid-area: section;
-    background-color: aqua;
-    color: grey;
+    background-color: #18667a;
+    color: hsl(192, 0%, 80%);
+    border: 1.5px solid hsl(192, 0%, 80%);
+
+    grid-column-start: 3;
+    grid-column-end: 13;
+
+    grid-row-start: 3;
+    grid-row-end: 12;
 }
 
+
 footer {
-    grid-area: footer;
-    background-color: blue;
-    color: grey;
+    grid-area: header;
+    background-color: #18667a;
+    color: hsl(192, 0%, 80%);
+    border: 1.5px solid hsl(192, 0%, 80%);
+
+    grid-column-start: 1;
+    grid-column-end: 13;
+
+    grid-row-start: 12;
+    grid-row-end: 13;
 }
