@@ -1,0 +1,69 @@
+body {
+    display: grid;
+    grid: autoflow min-content / repeat(12, 1fr);
+    /* autoflow(items would be automatically placed in the grid) 
+    5em (size of the rows) / 5em 5em 5em 5em (size of the columns) */
+
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    grid-template-rows: auto 2fr auto;
+}
+
+header {
+    grid-area: header;
+    color: whitesmoke;
+
+    border: 1px solid whitesmoke;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    grid-column-start: 1;
+    grid-column-end: 13;
+}
+
+main {
+    grid-area: main;
+
+    display: grid;
+    grid: autoflow min-content / repeat(4, 1fr);
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    grid-column-start: 1;
+    grid-column-end: 13;
+
+    justify-content: center;
+    align-content: center;
+}
+
+div {
+    height: 5em;
+    width: 5em;
+    object-fit: cover;
+    grid-column-end: span 1.5;
+}
+
+footer {
+    grid-area: footer;
+    color: whitesmoke;
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    grid-column-start: 1;
+    grid-column-end: 13;
+
+    border: 1px solid whitesmoke;
+}
+
+div {
+    grid-column-end: span 2;
+}
