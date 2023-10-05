@@ -43,11 +43,22 @@ main {
     color: hsl(192, 0%, 80%);
     border: 1.5px solid hsl(192, 0%, 80%);
 
+    /* CSS Grid */
     grid-column-start: 3;
     grid-column-end: 13;
 
     grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-end: 3; 
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.column-item {
+    flex: 1;
+    margin: 10px;
 }
 
 
